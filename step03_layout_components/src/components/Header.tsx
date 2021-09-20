@@ -2,7 +2,7 @@ import React from 'react';
 
 type HeaderProps = {
     text: string,
-    subtext?: string
+    subtext: string
 }
 
 export default ({text, subtext}: HeaderProps) => {

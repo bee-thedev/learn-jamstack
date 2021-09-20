@@ -8,6 +8,7 @@ export default () => {
             <Layout> 
                 <p>Panacloud develops internet scale global apps using JAMstack and multi-cloud </p>
             </Layout>
+            <Link to="/">Back to home</Link>
         </div>
     );
 }

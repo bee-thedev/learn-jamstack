@@ -1,3 +1,13 @@
 html {
-    background-color: yellow;
+    background-color: #00a877;
+    box-sizing: border-box;
+    margin: 0;
   }
+    
+  .index{
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: navy;
+}
