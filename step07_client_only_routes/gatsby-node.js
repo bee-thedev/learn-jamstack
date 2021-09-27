@@ -3,6 +3,8 @@
 exports.onCreatePage = async ({ page, actions }) => {
     const { createPage } = actions
   
+    console.log(actions);
+    console.log(page);
     // Only update the `/app` page.
     if (page.path.match(/^\/app/)) {
       // page.matchPath is a special key that's used for matching pages
@@ -10,6 +12,6 @@ exports.onCreatePage = async ({ page, actions }) => {
       page.matchPath = "/app/*"
   
       // Update the page.
-      createPage(page)
+      createPage(page) // this coming from actions
     }
   }

@@ -10,10 +10,9 @@ export default () => {
             <Layout>
                 <Header text="This is a heading" subtext="The is the sub heading"></Header>
                 <p>This is my home page</p>
-                <Button variant="contained" color="primary">
+                <Button variant="contained" color="secondary">
                     Hello from Material UI 
                 </Button>
-
             </Layout>
         </div>
     );
