@@ -8,7 +8,9 @@ import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title || `Title`
-  const posts = data.allContentfulPosts.nodes
+  // const posts = data.allContentfulPosts.nodes
+
+  const {allContentfulPosts: {nodes: posts}} = data;
 
   if (posts.length === 0) {
     return (
@@ -86,7 +88,7 @@ export const pageQuery = graphql`
         slug
         id
         excerpt
-        createdAt
+        createdAt(formatString: "yyyy-mm-DD-dd")
         blogpost {
           raw
         }
