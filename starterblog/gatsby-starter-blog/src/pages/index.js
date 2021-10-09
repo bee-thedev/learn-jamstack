@@ -7,9 +7,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title || `Title`
+  const siteTitle = data.site.siteMetadata?.title || `Title`
   // const posts = data.allContentfulPosts.nodes
-
   const {allContentfulPosts: {nodes: posts}} = data;
 
   if (posts.length === 0) {
@@ -63,6 +62,9 @@ const BlogIndex = ({ data, location }) => {
                 </header>
                 <section>
                 {documentToReactComponents(json, RICHTEXT_OPTIONS)}
+                </section>
+                <section>
+                <img src={post.blogimage.file.url} alt="hello" width="400" height="250"/>
                 </section>
               </article>
             </li>
